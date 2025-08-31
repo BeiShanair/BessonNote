@@ -1,0 +1,305 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>使用UE、Blender、SP制作建筑资产 | Memories Of The Sky</title><meta name="author" content="BeiShan_Besson"><meta name="copyright" content="BeiShan_Besson"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="制作建筑资产的笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用UE、Blender、SP制作建筑资产">
+<meta property="og:url" content="https://beishanair.github.io/BessonNote/2025/08/31/arch/index.html">
+<meta property="og:site_name" content="Memories Of The Sky">
+<meta property="og:description" content="制作建筑资产的笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://beishanair.github.io/BessonNote/pic/bg/bg7.jpg">
+<meta property="article:published_time" content="2025-08-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-31T09:36:24.599Z">
+<meta property="article:author" content="BeiShan_Besson">
+<meta property="article:tag" content="UE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://beishanair.github.io/BessonNote/pic/bg/bg7.jpg"><link rel="shortcut icon" href="/BessonNote/pic/BS.png"><link rel="canonical" href="https://beishanair.github.io/BessonNote/2025/08/31/arch/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/BessonNote/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/BessonNote/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '使用UE、Blender、SP制作建筑资产',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-31 17:36:24'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/BessonNote/pic/BS.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/BessonNote/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/BessonNote/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/BessonNote/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/BessonNote/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/BessonNote/pic/bg/bg1.jpg')"><nav id="nav"><span id="blog-info"><a href="/BessonNote/" title="Memories Of The Sky"><span class="site-name">Memories Of The Sky</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/BessonNote/"><i class="fa-fw fas fa-home"></i><span> Menu</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/BessonNote/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">使用UE、Blender、SP制作建筑资产</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-08-30T16:00:00.000Z" title="发表于 2025-08-31 00:00:00">2025-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-31T09:36:24.599Z" title="更新于 2025-08-31 17:36:24">2025-08-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/BessonNote/categories/note/">note</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="使用UE、Blender、SP制作建筑资产"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="简单的介绍"><a href="#简单的介绍" class="headerlink" title="简单的介绍"></a>简单的介绍</h1><p>这是我跟着一套教程，用<code>Unreal Engine</code>、<code>Blender</code>和<code>Substance 3D Painter</code><br>制作的<code>建筑资产</code>过程中记下的一些笔记，<code>不作为教程，仅作为经验分享</code></p>
+<p>内容由<code>《随·言》</code>系列第<code>9</code>篇扩充</p>
+<p>教程原链接：<a target="_blank" rel="noopener" href="https://www.yiihuu.com/a_12547.html">UE5进阶美学实战课程《MetalCabin》全流程教学</a></p>
+<p><code>注：如果要学习本教程，需要具备UE和Blender的基础知识</code></p>
+<p>另外，由于该教程的作者使用的UE为<code>5.3</code>版本，而现在最新版本已经来到了<code>5.6</code>，<br>即便是作者提供的源文件，也不一定能够直接使用了</p>
+<h1 id="Step-1-AI概念图"><a href="#Step-1-AI概念图" class="headerlink" title="Step 1-AI概念图"></a>Step 1-AI概念图</h1><p>开头是<code>AI</code>的<code>文生图</code>来制作<code>概念图</code>，教程作者用的是<code>Midjourney</code>，<br><code>Stable Diffusion</code>的话挑个和建筑相关的模型，应该也可以</p>
+<p>如果自己不想跑的话，找一些网站上的图也是一样的，比如<code>Pinterest</code></p>
+<p>绝大多数的<code>生成式AI</code>，像<code>ChatGPT</code>也有生图功能。不过我就用教程里的了，<br>自己没去跑<code>AI</code></p>
+<p>AI吧，这几年也是越来越强大，在<code>工作流</code>中融入AI，这肯定是一个趋势。<br>当然，AI跑的东西，还是得靠我们人来调整，<code>细节</code>上的东西还是得靠我们，<br>毕竟这个是因为它<code>算法</code>的问题</p>
+<p>不过在未来，也不知道能发展到怎么样一个程度。我并不反对使用<code>AI</code>，那么好一个<code>工具</code>，<br>干嘛不用呢。我自己编程也在用，不过问题百出，受制于大模型本身的<code>上下文长度限制</code>，<br>前面的东西它可能忘了，导致后面的对不上前面的，所以还是得我们自己去整合</p>
+<p>有用<code>AI</code>写<code>小说</code>的吧，短的还好，但如果写长篇的，写到后面的东西往往会和最初的设定<code>偏离</code>了，<br>这就是因为上下文长度限制，让AI把前面的东西忘记了</p>
+<p><code>生成式AI</code>，现阶段最主要的是它能给我们灵感，它就像<code>须弥</code>的<code>虚空</code>（特指它庞大的知识库），<br>确实是现实意义上的<code>统合人类的智慧</code>，再由我们再创</p>
+<p>当然，<code>DeepSeek</code>和<code>GPT</code>对我这个比喻评价为<code>一个需要警惕的完美比喻</code>，是的，AI再强大，<br>也不能抛开我们自己的独立思考</p>
+<h1 id="Step-2-UE白模搭建"><a href="#Step-2-UE白模搭建" class="headerlink" title="Step 2-UE白模搭建"></a>Step 2-UE白模搭建</h1><p>选取前面一个阶段AI跑出<code>概念图</code>，接下来进入<code>UE</code>，<br>用它的<code>建模模式</code>（<code>Shift + 5</code>）来搭建基础场景的白模</p>
+<p>至于新建项目时选择的模板，可以选择<code>第一人称</code>或者<code>第三人称游戏</code>，这就随意了，<br>因为我们只是制作资产</p>
+<p>为什么要搭建白模？因为我们的<code>概念图</code>是<code>AI</code>跑的，很多时候它生成的东西在我们<code>人</code>看来，<br>没有那么正确，我们要用<code>白模</code>看看建筑各个部分的关系<code>协调</code>情况，解决<code>周围环境</code>应该怎么布置，<br><code>摄像机</code>的位置怎么放，怎么<code>构图</code>等等问题</p>
+<p>这个其实并不只是<code>AI</code>跑的<code>概念图</code>要这么做，以后真正进入工作，加入团队，在建模之前肯定有<code>概念设计</code>这么一个阶段的，<br>可能有<code>原画师</code>绘制了场景的<code>概念图</code>，交给你去把它真正建出来，这大概是<code>地编</code>的工作吧</p>
+<p>我们<code>不可能</code>一上来直接去建<code>最终模型</code>的，不然如果要改动某一个部分，<br>这个工作量可是很大的，等基本上都确定了</p>
+<p>在<code>建筑学</code>专业待了两年，做建筑设计也是一样的，一开始都是<code>建盒子</code>，<code>做方案</code>，<br>到方案确定之后，就开始深入，制作更细致的模型，在到最终渲染之前，也是会改好多版的</p>
+<p>白模上的话，就用<code>简单几何体</code>来表示建筑、周围的山体或者其他内容</p>
+<p><img src="/BessonNote/pic/arch/1.png" alt="UE白模搭建"></p>
+<p> 不过，这里的白模搭建和我们真正做建筑设计不一样，毕竟游戏的场景，并不一定能符合现实，<br> 更多的应该是为<code>美学</code>考虑的，融入现实，也超越现实</p>
+<p> 噼里啪啦折腾一顿之后，也差不多可以了，白模搭好并不是就这样完了，后面还会进行微调的</p>
+<p> <img src="/BessonNote/pic/arch/2.png" alt="UE白模搭建"></p>
+<p> Tips：想保存当前视角？很简单，按下<code>Ctrl + 任意数字键</code>，即可保存当前视角到书签，<br> 后面移动了视角之后，只要再按下你前面设定的<code>数字键</code>，就可以回到之前的视角了</p>
+<h1 id="Step-3-Blender模型细化"><a href="#Step-3-Blender模型细化" class="headerlink" title="Step 3-Blender模型细化"></a>Step 3-Blender模型细化</h1><p>白模基本确定之后，那就可以进入下一步细化了。细化的工作呢，就是进入<code>DCC工具</code>去完成了</p>
+<p><code>DCC</code>全称是<code>Digital Content Creation</code>，也就是数字内容创作，包括三维建模、<br>二维图像处理、视频剪辑、音频处理等等，统称DCC。那么对于我们模型细化，<br>就是选择三维上的DCC工具了，这里我们就使用<code>Blender</code></p>
+<p><code>3Ds Max</code>呢，我也学了个皮毛，<code>Maya</code>更是没学过，<code>SU</code>你用来做细模那自然也不行，<br>所以还是用<code>Blender</code>吧。当然，当时在寻找教程的时候，其实特意选择了用Blender的教程，<br>毕竟除了SU，我也就只有<code>Blender</code>最熟悉了</p>
+<h2 id="UE-模型导出"><a href="#UE-模型导出" class="headerlink" title="UE 模型导出"></a>UE 模型导出</h2><p>这里我们直接将<code>UE</code>中建好的白模导出来，导出<code>FBX</code>格式的模型，因为你基本上已经调整好模型的大小之类的，<br>也省得我们再到Blender里面再建了</p>
+<p>然后我们到<code>Blender</code>里面，将模型导入</p>
+<p>额外的，可以顺便把UE的<code>人模</code>导过来，这样也方便检查建筑的细部是否符合现实，<br>比如层高（层高应该是在做白模时就要考虑的了）、窗台高、门高等等</p>
+<h2 id="Blender模型拆分"><a href="#Blender模型拆分" class="headerlink" title="Blender模型拆分"></a>Blender模型拆分</h2><p>里面要做的工作呢，首先是<code>拆</code>，要把<code>墙</code>、<code>天花板</code>、<code>地板</code>等等构件拆开，<br><code>重新设置它们的原点</code>，最终是在UE里面给它拼起来，就像搭积木一样</p>
+<p>这个呢就是模块化，因为很多构件我们是可以<code>重复利用</code>的，当然你能建<code>一整块</code>，<br>但那样并不好调整，万一你又想开个窗、开个门对吧？相当于<code>预制件</code>嘛，<br>只是整个建筑都是预制件，怎么拼就看你了</p>
+<p>另外还有一种<code>建筑生成</code>的办法，和UE结合的也较多的，就是<code>Houdini</code>程序化建模，<br>当然我也只是听说过这东西，并没有实际接触过，所以我们就不展开讨论了</p>
+<p>这里我们，在<code>编辑模式</code>下先给这些体块做<code>倒角</code>处理</p>
+<p><img src="/BessonNote/pic/arch/3.png" alt="Blender模型拆分"></p>
+<p><img src="/BessonNote/pic/arch/4.png" alt="Blender模型拆分"></p>
+<p>然后同样还是在<code>编辑模式</code>下，添加循环边，分离各个构件，可以为这些构件设置不同的材质，<br>用于区分</p>
+<p><img src="/BessonNote/pic/arch/5.png" alt="Blender模型拆分"></p>
+<p>后面的那些体块的拆分工作同样如此，这里就不再赘述</p>
+<p>然后是关于<code>命名</code>上的一些事情，正常工作中，是要遵循一定的<code>命名规范</code>的，不仅仅是避免你自己的困扰，<br>也是为了保持<code>团队协作</code>的高效，让团队里的其他人知道你这个是什么东西，<br>这倒是和编程一样的，你写个<code>abcd</code>，谁知道你这个变量干嘛用的，得联系上下文才知道</p>
+<p>UE里面的话，<code>静态网格体</code>标准的命名是<code>SM</code>前缀，即<code>Static Mesh</code>，<br><code>M</code>是<code>Material</code>，也就是<code>材质</code>，<code>MI</code>是<code>Material Instance</code>，<code>材质实例</code>等等</p>
+<h2 id="回到-UE-拼起来"><a href="#回到-UE-拼起来" class="headerlink" title="回到 UE 拼起来"></a>回到 UE 拼起来</h2><p>上面拆完之后，先别急着进行下一步，我们得回到<code>UE</code>里面，看看这些拆开的构件能不能拼回去</p>
+<p>在<code>Blender</code>中，我们可以安装一个<code>Orient and Origin to Selected</code>插件，用于快速指定<code>物体原点</code>的，<br>为了更好的拼接，利用UE自带的<code>捕捉对齐</code>功能，我们得设置物体的原点</p>
+<p>我们就将所有构件的原点设定到做上角</p>
+<p>而后，利用<code>Batex</code>插件将这些构件导出为FBX模型，Blender自带的FBX导出功能并不好，还是用插件</p>
+<p>在UE的<code>内容浏览器</code>中导入这些构件的模型，当然材质可以不用导入，我们直接赋予之前做白模用的纯白材质即可</p>
+<p>将构件拖到与之前白模差不多的位置上，删除白模，拼接各个建筑构件</p>
+<p><img src="/BessonNote/pic/arch/6.png" alt="回到 UE 拼起来"></p>
+<p><img src="/BessonNote/pic/arch/7.png" alt="回到 UE 拼起来"></p>
+<p>UE的<code>布置对齐</code>功能是在你移动物品的同时，按下<code>V</code>键，就能将物体原点对齐到最近的物体顶点上，<br>当然，建议是靠近目标顶点时再使用，它捕捉范围比较小</p>
+<p>可以看到整体效果还是不错的</p>
+<h2 id="面片实体化"><a href="#面片实体化" class="headerlink" title="面片实体化"></a>面片实体化</h2><p>接下来就是面片的实体化，因为UE中的渲染是只会渲染正面的，而背面是不会渲染的，<br>这个在拼接构件时，也应该注意到了</p>
+<p>所以我们要为这些面片增加厚度，这里就用到Blender的<code>实体化</code>修改器了，给这些面片加上这个修改器，<br>给予一定的厚度，再选择应用</p>
+<p>接下来就是开窗和开门了，就在<code>编辑模式</code>里面添加循环边，选择一些面删掉，作为开洞的地方</p>
+<p><img src="/BessonNote/pic/arch/8.png" alt="面片实体化"></p>
+<p>窗台的高度可以借助我们导出的<code>人模</code>辅助确定，开洞边缘可以再做<code>倒角</code>，<br>不过不做也可以，因为后面还有窗框、门框，它们会覆盖掉这个边缘</p>
+<p>对其他的构件也做相同的处理，可能你会做一堆不同的墙，这都没关系，命名处理好就行</p>
+<p>同样用<code>Batex</code>插件导出模型，原来模型的名字没变的话可以选择重新导入资产，<br>这样UE就自动更新已经导入的资产了，另外新的资产再导入即可，然后再拼上去</p>
+<p><img src="/BessonNote/pic/arch/9.png" alt="面片实体化"></p>
+<p>如果你觉得导入的模型光照上有问题，那么可以尝试进入<code>建模模式</code>，选择<code>属性</code>中的<code>法线</code>，<br>重新计算物体的法线即可</p>
+<p>其他部分的构件也是这样处理</p>
+<p><img src="/BessonNote/pic/arch/11.png" alt="面片实体化"></p>
+<p><img src="/BessonNote/pic/arch/10.png" alt="面片实体化"></p>
+<h1 id="Step-4-材质制作"><a href="#Step-4-材质制作" class="headerlink" title="Step 4-材质制作"></a>Step 4-材质制作</h1><h2 id="Blender材质初步"><a href="#Blender材质初步" class="headerlink" title="Blender材质初步"></a>Blender材质初步</h2><p>接下来就是制作材质了，这里我们先在<code>Blender</code>里面<code>展开并打包UV</code></p>
+<p>我们可以使用<code>棋盘格纹理</code>来检查各个部分的材质情况，是否有不正常的拉伸、缩放等，<br>然后根据实际情况去指定模型的<code>缝合边</code></p>
+<p>缝合边的话，简单拿纸盒子举例，打开纸盒时，盖子除了和纸盒相连的部分，<br>另外和纸盒分开的三边，就是缝合边</p>
+<p><img src="/BessonNote/pic/arch/12.png" alt="Blender材质初步"></p>
+<p>其他构件的材质也是类似的</p>
+<p><img src="/BessonNote/pic/arch/13.png" alt="Blender材质初步"></p>
+<p><img src="/BessonNote/pic/arch/14.png" alt="Substance Painter材质制作"></p>
+<p>为了确保建筑构件中的UV缩放一致，可以使用<code>Zen UV</code>插件，选取一个大小合适的密度，<br>并将这个值赋予给其他的物体</p>
+<p>然后我们使用<code>UV Packmaster 3</code>这个插件将同一个体块的建筑构件打包到同一个<code>UV</code>中，<br>以方便后续的操作</p>
+<p>当然，打包到同一个UV中，只适用于使用同一个材质的物体，不同材质的物体还是得导出不同的UV</p>
+<p>不过注意，上述的两个插件<code>并不是免费的</code>，有能力请支持正版</p>
+<h2 id="Substance-Painter材质制作"><a href="#Substance-Painter材质制作" class="headerlink" title="Substance Painter材质制作"></a>Substance Painter材质制作</h2><p>同一个构件可以将它们合并成同一个物体，再由<code>Batex</code>导出，当然这个模型只是用来做材质的</p>
+<p>这里也注意一点，在合并这些物体之前，<code>复制</code>一份出来，而不是将原本的那些物体直接合并了，<br>另外确保它们的物体数据中<code>UV贴图</code>的名字是一样的，否则合并会出问题</p>
+<p>然后就跑到<code>Substance Painter</code>里面制作材质了</p>
+<p><code>Substance 3D Painter</code>，简称<code>SP</code>，也是<code>Adobe</code>公司旗下的软件。参考别人的说法，<br><code>SP</code>像<code>PS</code>，上手更快。同一个家族的另外一个东西，<code>Substance 3D Designer</code>，<br>简称<code>SD</code>（和那个绘画AI重名了诶），它更复杂，也是专业做材质的</p>
+<p>暂且还是<code>SP</code>用用吧，基本上是和<code>PS</code>差不多，<code>叠材质，叠蒙版</code>，<br>要改的话就是自己再画些东西上去</p>
+<p>这里将我们导出的模型导入这个软件中，然后先要进行<code>烘焙贴图</code>，才能进行后面的操作</p>
+<p>教程中的话，在烘焙贴图之前，还自己创建了RGB另外的三个通道，这三个图层是为PBR材质服务的，<br>因为我用的是UE5.4，所以作者提供的那个<code>PBR材质球</code>没法用，我就省略了，后面的材质也按照一般的做法实现了</p>
+<p><img src="/BessonNote/pic/arch/15.png" alt="Substance Painter材质制作"></p>
+<p>噼里啪啦折腾一顿之后，就可以自己调好的材质存为智能材质，这样后面的那些模型也就可以用了，<br>最后就是导出材质，导出预设上可以选择UE5的那个预设，随后得到三张图片</p>
+<h2 id="UE-制作材质球"><a href="#UE-制作材质球" class="headerlink" title="UE 制作材质球"></a>UE 制作材质球</h2><p>得到贴图之后，我们就可以回到UE中制作<code>材质球</code>了，这里我们将得到的三张图片导入<code>内容浏览器</code></p>
+<p>其中的带了<code>OcclusionRoughnessMetallic</code>这张图，我们得关掉它的<code>sRGB</code>颜色空间，<br>因为这张图的<code>RGB</code>通道分别对应的是<code>Occlusion</code>、<code>Roughness</code>、<code>Metallic</code>，<br>它们分别存储了这些数据，并不是颜色数据</p>
+<p>然后我们就可以创建一个材质球，将贴图赋予给材质球，<code>BaseColor</code>给基础颜色，<br><code>Normal</code>给法线，还有一张的<code>R</code>给<code>环境光遮蔽</code>，<code>G</code>给<code>粗糙度</code>，<code>B</code>给<code>金属度</code>，<br>就得到了一个最简单的<code>PBR材质</code></p>
+<p>然后把这个材质球给相应的建筑构件即可（之前设定UV之后的模型得再重载一遍）</p>
+<p><img src="/BessonNote/pic/arch/16.png" alt="UE 制作材质球"></p>
+<p><img src="/BessonNote/pic/arch/17.png" alt="UE 制作材质球"></p>
+<p>次世代确实少不了PBR材质，没有PBR的话，看起来确实很假，UE的材质系统也是节点，<br>不过背后其实是HLSL语言，其实是能调出它的源代码的，不过没法在UE中编辑</p>
+<p>嗯，找个机会，也得学学看。哎，你真是什么都想学啊~但没办法，既然选择走TA，<br>那么得学很多很多东西嘞</p>
+<h1 id="Step-5-场景与细节"><a href="#Step-5-场景与细节" class="headerlink" title="Step 5-场景与细节"></a>Step 5-场景与细节</h1><p>到这里也差不多了，后面就是场景上和建筑细部上的东西了</p>
+<h2 id="地面"><a href="#地面" class="headerlink" title="地面"></a>地面</h2><p>先用UE的地形模式建一片地面，然后给上材质，当然，其实没那么简单</p>
+<p>这里我们得先对项目引擎的配置文件加上这两行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">r.Nanite.AllowTessellation=1</span><br><span class="line">r.Nanite.Tessellation=1</span><br></pre></td></tr></table></figure>
+<p>允许我们的项目开启<code>Nanite</code>，并且允许<code>Nanite</code>进行<code>Tessellation</code>，也就是<code>曲面细分</code></p>
+<p>这是为了置换材质的</p>
+<p>关于置换材质，这个材质的教程在<code>YouTube</code>上也有，找<code>Unreal Sensei</code>的<code>Easy Mapper</code>教程</p>
+<p>当然我用了现成的材质球，哎呀，也不是什么都要学啦，感兴趣的东西肯定会回去学的</p>
+<p>让地形启用<code>Nanite</code>，让它运算完，然后我们就可以用现成的材质球调节凹凸高度</p>
+<p><img src="/BessonNote/pic/arch/18.png" alt="地面"></p>
+<p>置换比法线贴图更真实，因为它真正改变了<code>模型表面</code>，而法线贴图只是用<code>不同方向的光线</code>模拟凹凸，<br>实际上还是一个平面，当然置换对性能要求更高</p>
+<h2 id="水"><a href="#水" class="headerlink" title="水"></a>水</h2><p>水环境的话，就用UE的插件<code>Water</code>和<code>Water Extras</code>来制作</p>
+<p><img src="/BessonNote/pic/arch/19.png" alt="水"></p>
+<p>水深会影响水的颜色和波浪的起伏（因为用的<code>海洋</code>预设），水的颜色通过材质调节，<br>水底的地面用的是上面我们创建的地面，可能要重新运算<code>Nanite</code>，贴图颜色可以压暗，<br>水体也会跟着压暗</p>
+<h2 id="岩石与山体"><a href="#岩石与山体" class="headerlink" title="岩石与山体"></a>岩石与山体</h2><p>岩石和山的话，用的都是现成的资产，当然你可以选择自己制作（我猜不会）</p>
+<p>大型山体可以用<code>World Machine</code>或者<code>Gaea</code>制作，它们是专业的地形制作软件，<br>至于怎么用以后再说</p>
+<p>岩石么，<code>Blender</code>可以用噪波搓出来，也以后再说</p>
+<p>岩石和山将原本的白模替换掉，再调整一下就差不多了</p>
+<p><img src="/BessonNote/pic/arch/20.png" alt="岩石与山体"></p>
+<p>要让岩石更有细节，可以从<code>Nordic Coast Collections</code>这个资产集中拿一个函数过来，<br>这个函数是模拟湿润材质的</p>
+<p><img src="/BessonNote/pic/arch/21.png" alt="岩石与山体"></p>
+<h2 id="植被"><a href="#植被" class="headerlink" title="植被"></a>植被</h2><p><code>小花小草</code>，树木什么的，也都可以用现成的资产，再用<code>植物</code>模式刷出来</p>
+<p><img src="/BessonNote/pic/arch/22.png" alt="植被"></p>
+<p>当然，树的话最好用低模，或者<code>LOD</code>以及代理模型，因为真的很吃性能</p>
+<p>不过还没搞过<code>UE</code>的<code>LOD</code>和<code>代理模型</code>，所以就直接刷吧</p>
+<h2 id="建筑细节"><a href="#建筑细节" class="headerlink" title="建筑细节"></a>建筑细节</h2><p>我们在建一些窗框，给原本的窗加上，用一个面片给上玻璃材质，再堆点其他的资产上去，<br>就差不多了</p>
+<p><img src="/BessonNote/pic/arch/23.png" alt="建筑细节"></p>
+<p><img src="/BessonNote/pic/arch/24.png" alt="建筑细节"></p>
+<h1 id="Step-6-渲染出图"><a href="#Step-6-渲染出图" class="headerlink" title="Step 6-渲染出图"></a>Step 6-渲染出图</h1><p>为建筑内部加上一点灯光，然后就可以用UE的插件<code>Movie Render Queue</code>渲染出图了</p>
+<p><img src="/BessonNote/pic/bg/bg7.jpg" alt="渲染出图"></p>
+<p>当然，其实整个场景是这样的</p>
+<p><img src="/BessonNote/pic/arch/25.png" alt="渲染出图"></p>
+<p>嗯，外面的山都飘在上面，并不是实体的山，只做视觉上的远山，所以，<br>这也是为什么<code>开放世界</code>游戏会限制边界的原因之一，边界外可能是扔了什么资产，<br>或者就是只是起辅助视觉作用的一些东西</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>以上就是<code>AI概念图，UE白模、渲染，Blender细化、展UV，SP材质制作</code>的全流程，<br>原教程我跳过的后面的部分，因为前面的基本内容学会了，其实也差不多了，<br>后面你要搓一些资产，大体的流程就是这样了</p>
+<p>当然，其实在<code>建模</code>和<code>UV</code>上，能够展开的东西还有很多很多，怎么让模型更好看，细节更多？<br>材质怎么叠更加真实、更细致、更协调等等</p>
+<p>上面也说了，地形可以用<code>World Machine</code>或者<code>Gaea</code>制作，岩石可以用<code>Blender</code>制作，<br>树木可以用<code>SpeedTree</code>制作，小植被可以用<code>Blender</code>或者其他的DCC工具制作等等</p>
+<p>光是我们在场景中用到的其他资产，也可以尝试自己去制作</p>
+<p>反正要学的东西很多嘞，慢慢学吧</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/BessonNote">BeiShan_Besson</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://beishanair.github.io/BessonNote/2025/08/31/arch/">https://beishanair.github.io/BessonNote/2025/08/31/arch/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://beishanair.github.io/BessonNote" target="_blank">Memories Of The Sky</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/BessonNote/tags/UE/">UE</a></div><div class="post_share"><div class="social-share" data-image="/BessonNote/pic/bg/bg7.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/BessonNote/2025/08/06/ue/" title="Unreal Engine 学习笔记"><img class="cover" src="/BessonNote/pic/bg/bg3.jpg" onerror="onerror=null;src='/BessonNote/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Unreal Engine 学习笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/BessonNote/2025/08/06/ue/" title="Unreal Engine 学习笔记"><img class="cover" src="/BessonNote/pic/bg/bg3.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-06</div><div class="title">Unreal Engine 学习笔记</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/BessonNote/pic/BS.png" onerror="this.onerror=null;this.src='/BessonNote/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BeiShan_Besson</div><div class="author-info__description">一起来学习吧！</div></div><div class="card-info-data site-data is-center"><a href="/BessonNote/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/BessonNote/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/BessonNote/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/BeiShanair"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BeiShanair" target="_blank" title="Github"><i class="fab fa-github" style="color: #FFFFFF;"></i></a><a class="social-icon" href="mailto:besson_arch@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/489671468" target="_blank" title="Bilibili"><i class="fab fa-bilibili" style="color: #FF679A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客！如有问题请加交流频道：pd09376785</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">简单的介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Step-1-AI%E6%A6%82%E5%BF%B5%E5%9B%BE"><span class="toc-number">2.</span> <span class="toc-text">Step 1-AI概念图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Step-2-UE%E7%99%BD%E6%A8%A1%E6%90%AD%E5%BB%BA"><span class="toc-number">3.</span> <span class="toc-text">Step 2-UE白模搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Step-3-Blender%E6%A8%A1%E5%9E%8B%E7%BB%86%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">Step 3-Blender模型细化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UE-%E6%A8%A1%E5%9E%8B%E5%AF%BC%E5%87%BA"><span class="toc-number">4.1.</span> <span class="toc-text">UE 模型导出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blender%E6%A8%A1%E5%9E%8B%E6%8B%86%E5%88%86"><span class="toc-number">4.2.</span> <span class="toc-text">Blender模型拆分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0-UE-%E6%8B%BC%E8%B5%B7%E6%9D%A5"><span class="toc-number">4.3.</span> <span class="toc-text">回到 UE 拼起来</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E7%89%87%E5%AE%9E%E4%BD%93%E5%8C%96"><span class="toc-number">4.4.</span> <span class="toc-text">面片实体化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Step-4-%E6%9D%90%E8%B4%A8%E5%88%B6%E4%BD%9C"><span class="toc-number">5.</span> <span class="toc-text">Step 4-材质制作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Blender%E6%9D%90%E8%B4%A8%E5%88%9D%E6%AD%A5"><span class="toc-number">5.1.</span> <span class="toc-text">Blender材质初步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Substance-Painter%E6%9D%90%E8%B4%A8%E5%88%B6%E4%BD%9C"><span class="toc-number">5.2.</span> <span class="toc-text">Substance Painter材质制作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UE-%E5%88%B6%E4%BD%9C%E6%9D%90%E8%B4%A8%E7%90%83"><span class="toc-number">5.3.</span> <span class="toc-text">UE 制作材质球</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Step-5-%E5%9C%BA%E6%99%AF%E4%B8%8E%E7%BB%86%E8%8A%82"><span class="toc-number">6.</span> <span class="toc-text">Step 5-场景与细节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%B0%E9%9D%A2"><span class="toc-number">6.1.</span> <span class="toc-text">地面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B0%B4"><span class="toc-number">6.2.</span> <span class="toc-text">水</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B2%A9%E7%9F%B3%E4%B8%8E%E5%B1%B1%E4%BD%93"><span class="toc-number">6.3.</span> <span class="toc-text">岩石与山体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A4%8D%E8%A2%AB"><span class="toc-number">6.4.</span> <span class="toc-text">植被</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AD%91%E7%BB%86%E8%8A%82"><span class="toc-number">6.5.</span> <span class="toc-text">建筑细节</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Step-6-%E6%B8%B2%E6%9F%93%E5%87%BA%E5%9B%BE"><span class="toc-number">7.</span> <span class="toc-text">Step 6-渲染出图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/BessonNote/2025/08/31/arch/" title="使用UE、Blender、SP制作建筑资产"><img src="/BessonNote/pic/bg/bg7.jpg" onerror="this.onerror=null;this.src='/BessonNote/img/404.jpg'" alt="使用UE、Blender、SP制作建筑资产"/></a><div class="content"><a class="title" href="/BessonNote/2025/08/31/arch/" title="使用UE、Blender、SP制作建筑资产">使用UE、Blender、SP制作建筑资产</a><time datetime="2025-08-30T16:00:00.000Z" title="发表于 2025-08-31 00:00:00">2025-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/BessonNote/2025/08/06/ue/" title="Unreal Engine 学习笔记"><img src="/BessonNote/pic/bg/bg3.jpg" onerror="this.onerror=null;this.src='/BessonNote/img/404.jpg'" alt="Unreal Engine 学习笔记"/></a><div class="content"><a class="title" href="/BessonNote/2025/08/06/ue/" title="Unreal Engine 学习笔记">Unreal Engine 学习笔记</a><time datetime="2025-08-05T17:00:00.000Z" title="发表于 2025-08-06 01:00:00">2025-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/BessonNote/2025/08/06/u3d/" title="Unity3D 学习笔记"><img src="/BessonNote/pic/bg/bg6.jpg" onerror="this.onerror=null;this.src='/BessonNote/img/404.jpg'" alt="Unity3D 学习笔记"/></a><div class="content"><a class="title" href="/BessonNote/2025/08/06/u3d/" title="Unity3D 学习笔记">Unity3D 学习笔记</a><time datetime="2025-08-05T16:00:00.000Z" title="发表于 2025-08-06 00:00:00">2025-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/BessonNote/2025/03/18/gh/" title="Grasshopper 气象数据可视化"><img src="/BessonNote/pic/bg/bg5.jpg" onerror="this.onerror=null;this.src='/BessonNote/img/404.jpg'" alt="Grasshopper 气象数据可视化"/></a><div class="content"><a class="title" href="/BessonNote/2025/03/18/gh/" title="Grasshopper 气象数据可视化">Grasshopper 气象数据可视化</a><time datetime="2025-03-18T07:00:00.000Z" title="发表于 2025-03-18 15:00:00">2025-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/BessonNote/2025/03/11/csharp/" title="C# 学习笔记"><img src="/BessonNote/pic/bg/bg4.jpg" onerror="this.onerror=null;this.src='/BessonNote/img/404.jpg'" alt="C# 学习笔记"/></a><div class="content"><a class="title" href="/BessonNote/2025/03/11/csharp/" title="C# 学习笔记">C# 学习笔记</a><time datetime="2025-03-11T07:00:00.000Z" title="发表于 2025-03-11 15:00:00">2025-03-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By BeiShan_Besson</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/BessonNote/js/utils.js?v=4.13.0"></script><script src="/BessonNote/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
